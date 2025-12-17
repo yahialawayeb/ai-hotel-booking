@@ -1,0 +1,63 @@
+{
+    "Navbar": {
+        "home": "LuxeHotel",
+        "rooms": "Chambres",
+        "about": "À Propos",
+        "contact": "Contact",
+        "login": "Se Connecter",
+        "logout": "Déconnexion",
+        "hello": "Bonjour"
+    },
+    "Home": {
+        "welcome": "Bienvenue à LuxeHotel",
+        "subtitle": "Vivez le luxe comme jamais auparavant",
+        "heroTitle": "Vivez le Luxe comme jamais auparavant",
+        "heroSubtitle": "Découvrez le confort, l'élégance et un service de classe mondiale au LuxeHotel.",
+        "viewRooms": "Voir les Chambres",
+        "whyStayTitle": "Pourquoi Séjourner Avec Nous",
+        "whyStaySubtitle": "Nous offrons plus qu'une simple chambre ; nous offrons une expérience.",
+        "feature1Title": "Chambres Premium",
+        "feature1Text": "Conçues pour le confort avec des équipements modernes et des vues imprenables.",
+        "feature2Title": "Cuisine Gastronomique",
+        "feature2Text": "Profitez de délices culinaires exquis préparés par de grands chefs.",
+        "feature3Title": "Spa Relaxant",
+        "feature3Text": "Détendez-vous avec nos soins spa et bien-être de classe mondiale.",
+        "ctaTitle": "Prêt pour un Séjour Inoubliable ?",
+        "ctaButton": "Réservez Votre Séjour Aujourd'hui"
+    },
+    "About": {
+        "title": "Notre Histoire",
+        "description": "LuxeHotel définit le luxe depuis 2025. Notre mission est d'offrir une expérience inoubliable mêlant confort moderne et élégance intemporelle.",
+        "mission": "Notre Mission",
+        "missionText": "Créer des souvenirs durables pour nos clients grâce à un service exceptionnel et une attention aux détails.",
+        "values": "Nos Valeurs",
+        "valuesText": "Excellence, Intégrité et Satisfaction Client."
+    },
+    "Contact": {
+        "title": "Contactez-nous",
+        "subtitle": "Nous serions ravis de vous entendre",
+        "address": "123 Avenue du Luxe, Paris, France",
+        "email": "contact@luxehotel.com",
+        "phone": "+33 1 23 45 67 89",
+        "form": {
+            "name": "Nom",
+            "email": "Email",
+            "message": "Message",
+            "submit": "Envoyer le message"
+        }
+    },
+    "Rooms": {
+        "title": "Nos Chambres Luxueuses",
+        "subtitle": "Trouvez l'espace parfait pour votre séjour",
+        "details": "Voir Détails",
+        "night": "nuit"
+    },
+    "Chat": {
+        "title": "Concierge IA",
+        "placeholder": "Demandez à propos des chambres...",
+        "send": "Envoyer",
+        "greeting": "Bonjour ! Je peux vous aider à trouver la chambre parfaite. Posez-moi n'importe quelle question !",
+        "typing": "En train d'écrire...",
+        "error": "Désolé, j'ai des problèmes de connexion."
+    }
+}

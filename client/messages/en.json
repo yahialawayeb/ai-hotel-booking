@@ -1,0 +1,63 @@
+{
+    "Navbar": {
+        "home": "LuxeHotel",
+        "rooms": "Rooms",
+        "about": "About",
+        "contact": "Contact",
+        "login": "Sign In",
+        "logout": "Logout",
+        "hello": "Hello"
+    },
+    "Home": {
+        "welcome": "Welcome to LuxeHotel",
+        "subtitle": "Experience luxury like never before",
+        "heroTitle": "Experience Luxury Like Never Before",
+        "heroSubtitle": "Discover comfort, elegance, and world-class service at LuxeHotel.",
+        "viewRooms": "View Rooms",
+        "whyStayTitle": "Why Stay With Us",
+        "whyStaySubtitle": "We provide more than just a room; we provide an experience.",
+        "feature1Title": "Premium Rooms",
+        "feature1Text": "Designed for comfort with modern amenities and stunning views.",
+        "feature2Title": "Gourmet Dining",
+        "feature2Text": "Enjoy exquisite culinary delights prepared by top chefs.",
+        "feature3Title": "Relaxing Spa",
+        "feature3Text": "Unwind with our world-class spa and wellness treatments.",
+        "ctaTitle": "Ready for an Unforgettable Stay?",
+        "ctaButton": "Book Your Stay Today"
+    },
+    "About": {
+        "title": "Our Story",
+        "description": "LuxeHotel has been defining luxury since 2025. Our mission is to provide an unforgettable experience properly blending modern comfort with timeless elegance.",
+        "mission": "Our Mission",
+        "missionText": "To create lasting memories for our guests through exceptional service and attention to detail.",
+        "values": "Our Values",
+        "valuesText": "Excellence, Integrity, and Guest Satisfaction."
+    },
+    "Contact": {
+        "title": "Contact Us",
+        "subtitle": "We'd love to hear from you",
+        "address": "123 Luxury Ave, Paris, France",
+        "email": "contact@luxehotel.com",
+        "phone": "+33 1 23 45 67 89",
+        "form": {
+            "name": "Name",
+            "email": "Email",
+            "message": "Message",
+            "submit": "Send Message"
+        }
+    },
+    "Rooms": {
+        "title": "Our Luxurious Rooms",
+        "subtitle": "Find the perfect space for your stay",
+        "details": "View Details",
+        "night": "night"
+    },
+    "Chat": {
+        "title": "Concierge AI",
+        "placeholder": "Ask about rooms...",
+        "send": "Send",
+        "greeting": "Hello! I can help you find the perfect room. Ask me anything!",
+        "typing": "Typing...",
+        "error": "Sorry, I'm having trouble connecting."
+    }
+}

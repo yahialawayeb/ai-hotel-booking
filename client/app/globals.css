@@ -1,0 +1,58 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-heading: var(--font-playfair), serif;
+
+  --color-primary: #C5A059;
+  --color-primary-dark: #B08D45;
+  --color-secondary: #1A1A1A;
+  --color-secondary-light: #333333;
+  --color-surface: #FFFFFF;
+  --color-background: #FAFAFA;
+  --color-text-main: #333333;
+  --color-text-light: #F5F5F5;
+  --color-text-muted: #666666;
+  --color-border: #E0E0E0;
+
+  --shadow-premium: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+/* Custom Base Styles */
+@layer base {
+  body {
+    @apply font-sans bg-background text-text-main antialiased;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-heading font-bold text-secondary mb-4;
+  }
+}
+
+/* Custom Component Classes */
+@layer components {
+  .btn {
+    @apply inline-block px-6 py-3 rounded-lg font-semibold text-center transition-all duration-300 cursor-pointer border-none;
+  }
+
+  .btn-primary {
+    @apply bg-primary text-white hover:bg-primary-dark;
+  }
+
+  .btn-secondary {
+    @apply bg-secondary text-white hover:bg-secondary-light;
+  }
+
+  .btn-sm {
+    @apply px-4 py-2 text-sm;
+  }
+
+  .container-custom {
+    @apply max-w-7xl mx-auto px-5;
+  }
+}
