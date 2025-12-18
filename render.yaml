@@ -2,8 +2,7 @@ services:
   - type: web
     name: hotel-management-server
     env: docker
-    dockerContext: server
-    dockerfilePath: server/Dockerfile
+    rootDirectory: server
     plan: free
     envVars:
       - key: DATABASE_URL
