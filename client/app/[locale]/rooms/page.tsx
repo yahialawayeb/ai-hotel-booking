@@ -22,40 +22,76 @@ export default async function RoomsPage() {
     const rooms = await getRooms();
 
     return (
-        <div className="container-custom py-20 min-h-screen">
-            <div className="text-center mb-16">
-                <h1 className="text-4xl font-heading font-bold text-secondary mb-4">Our Luxurious Rooms</h1>
-                <p className="text-text-muted">Find the perfect space for your stay.</p>
-            </div>
+        <div className="bg-background min-h-screen">
+            {/* Header Section */}
+            <header className="bg-secondary text-white py-24 px-6 text-center relative overflow-hidden">
+                <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/asfalt-dark.png')] opacity-30" />
+                <div className="container-custom relative z-10">
+                    <h1 className="text-4xl md:text-6xl font-heading font-bold text-white mb-6">Our Luxurious Accommodations</h1>
+                    <p className="text-white/70 text-lg max-w-2xl mx-auto">Explore our curated selection of premium rooms, each designed for your ultimate comfort and style.</p>
+                </div>
+            </header>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                {rooms.map((room: any) => (
-                    <div key={room.id} className="border border-border rounded-lg overflow-hidden transition-all duration-200 hover:-translate-y-1 hover:shadow-premium bg-surface">
-                        <div className="h-64 relative bg-gray-200 flex items-center justify-center text-gray-500 overflow-hidden group-hover:scale-105 transition-transform duration-500">
-                            {room.image ? (
-                                <Image
-                                    src={room.image}
-                                    alt={`Room ${room.number}`}
-                                    fill
-                                    className="object-cover"
-                                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                                />
-                            ) : (
-                                <span>Room Image</span>
-                            )}
-                        </div>
-                        <div className="p-6">
-                            <h2 className="text-xl font-bold mb-2 text-secondary">{room.type} - {room.number}</h2>
-                            <p className="text-text-muted text-sm mb-6 line-clamp-2 overflow-hidden">{room.description || 'No description available.'}</p>
-                            <div className="flex justify-between items-center mt-auto">
-                                <span className="text-lg font-bold text-primary-dark">${room.price} / night</span>
-                                <Link href={`/rooms/${room.id}`} className="btn btn-primary px-4 py-2 text-sm">
-                                    View Details
-                                </Link>
+            <div className="container-custom py-20">
+                {/* Rooms Grid */}
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+                    {rooms.map((room: any) => (
+                        <div
+                            key={room.id}
+                            className="group bg-white rounded-3xl overflow-hidden shadow-premium hover:shadow-premium-hover transition-all duration-500 transform hover:-translate-y-2 border border-border/50"
+                        >
+                            {/* Image Container */}
+                            <div className="h-72 relative overflow-hidden bg-gray-100">
+                                {room.image ? (
+                                    <Image
+                                        src={room.image}
+                                        alt={`Room ${room.number}`}
+                                        fill
+                                        className="object-cover transition-transform duration-700 group-hover:scale-110"
+                                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                                    />
+                                ) : (
+                                    <div className="w-full h-full flex flex-col items-center justify-center text-gray-400 bg-gray-50">
+                                        <div className="text-5xl mb-2">🏨</div>
+                                        <span className="font-medium">Premium Room</span>
+                                    </div>
+                                )}
+                                <div className="absolute top-4 right-4 bg-secondary/80 backdrop-blur-md text-white px-4 py-1.5 rounded-full text-sm font-semibold tracking-wide">
+                                    {room.type}
+                                </div>
+                            </div>
+
+                            {/* Content */}
+                            <div className="p-8">
+                                <div className="flex justify-between items-start mb-4">
+                                    <h2 className="text-2xl font-bold text-secondary group-hover:text-primary transition-colors">
+                                        Room {room.number}
+                                    </h2>
+                                    <div className="text-right">
+                                        <span className="block text-2xl font-bold text-primary-dark">${room.price}</span>
+                                        <span className="text-xs text-text-muted uppercase tracking-widest">Per Night</span>
+                                    </div>
+                                </div>
+                                <p className="text-text-muted leading-relaxed mb-8 line-clamp-2">
+                                    {room.description || 'Experience luxury at its finest in this thoughtfully appointed space, featuring premium amenities and elegant decor.'}
+                                </p>
+                                <div className="flex items-center justify-between border-t border-border pt-6">
+                                    <div className="flex gap-4">
+                                        <span title="Free Wi-Fi" className="text-xl">📶</span>
+                                        <span title="Breakfast included" className="text-xl">🍳</span>
+                                        <span title="Pool access" className="text-xl">🏊</span>
+                                    </div>
+                                    <Link
+                                        href={`/rooms/${room.id}`}
+                                        className="btn btn-primary rounded-full px-8 hover:scale-105 active:scale-95"
+                                    >
+                                        Details
+                                    </Link>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                ))}
+                    ))}
+                </div>
             </div>
         </div>
     );
