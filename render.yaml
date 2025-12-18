@@ -2,7 +2,6 @@ services:
   - type: web
     name: hotel-server
     env: docker
-    rootDir: server
     plan: free
     envVars:
       - key: DATABASE_URL
