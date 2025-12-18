@@ -6,7 +6,8 @@
         "contact": "Contact",
         "login": "Sign In",
         "logout": "Logout",
-        "hello": "Hello"
+        "hello": "Hello",
+        "language": "Language"
     },
     "Home": {
         "welcome": "Welcome to LuxeHotel",

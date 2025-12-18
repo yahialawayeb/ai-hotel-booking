@@ -6,7 +6,8 @@
         "contact": "Contact",
         "login": "Se Connecter",
         "logout": "Déconnexion",
-        "hello": "Bonjour"
+        "hello": "Bonjour",
+        "language": "Langue"
     },
     "Home": {
         "welcome": "Bienvenue à LuxeHotel",
