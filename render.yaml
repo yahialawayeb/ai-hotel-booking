@@ -3,7 +3,7 @@ services:
     name: hotel-management-server
     env: docker
     dockerContext: server
-    dockerfilePath: Dockerfile
+    dockerfilePath: server/Dockerfile
     plan: free
     envVars:
       - key: DATABASE_URL
