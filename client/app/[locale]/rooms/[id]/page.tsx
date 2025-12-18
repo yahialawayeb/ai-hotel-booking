@@ -3,11 +3,19 @@ import BookingForm from '../../components/BookingForm';
 import { getApiUrl } from '../../../lib/api';
 
 async function getRoom(id: string) {
-    const res = await fetch(`${getApiUrl()}/rooms/${id}`, { cache: 'no-store' });
-    if (!res.ok) {
-        throw new Error('Failed to fetch room');
+    const apiUrl = getApiUrl();
+    try {
+        console.log(`Fetching room ${id} from: ${apiUrl}/rooms/${id}`);
+        const res = await fetch(`${apiUrl}/rooms/${id}`, { cache: 'no-store' });
+        if (!res.ok) {
+            console.error(`Failed to fetch room ${id}: ${res.status} ${res.statusText}`);
+            throw new Error('Failed to fetch room');
+        }
+        return res.json();
+    } catch (error) {
+        console.error(`Error in getRoom ${id}:`, error);
+        throw error;
     }
-    return res.json();
 }
 
 export default async function RoomDetailPage({ params }: { params: Promise<{ id: string }> }) {

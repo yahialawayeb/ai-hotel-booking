@@ -3,12 +3,19 @@ import Image from 'next/image';
 import { getApiUrl } from '../../lib/api';
 
 async function getRooms() {
-    const res = await fetch(`${getApiUrl()}/rooms`, { cache: 'no-store' });
-    if (!res.ok) {
-        // This will activate the closest `error.js` Error Boundary
-        throw new Error('Failed to fetch rooms');
+    const apiUrl = getApiUrl();
+    try {
+        console.log(`Fetching rooms from: ${apiUrl}/rooms`);
+        const res = await fetch(`${apiUrl}/rooms`, { cache: 'no-store' });
+        if (!res.ok) {
+            console.error(`Failed to fetch rooms: ${res.status} ${res.statusText}`);
+            throw new Error('Failed to fetch rooms');
+        }
+        return res.json();
+    } catch (error) {
+        console.error('Error in getRooms:', error);
+        throw error;
     }
-    return res.json();
 }
 
 export default async function RoomsPage() {
