@@ -68,7 +68,7 @@ async function main() {
             '1611892440504-42a792e24d32',
             '1582719508461-905c673771fd',
             '1596394516093-501ba68a0ba6'
-        ][Math.floor(Math.random() * 5)]}?auto=format&fit=crop&w=800&q=80`;
+        ][Math.floor(Math.random() * 3)]}?auto=format&fit=crop&w=800&q=80`;
 
         const room = await prisma.room.upsert({
             where: { number: roomNumber },
