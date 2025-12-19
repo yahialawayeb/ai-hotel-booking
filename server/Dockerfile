@@ -17,4 +17,4 @@ RUN npm run build
 
 EXPOSE 4000
 
-CMD ["sh", "-c", "npx prisma db push --force-reset && npx prisma db seed && npm run start:dev"]
+CMD ["sh", "-c", "npx prisma db push --force-reset && npx prisma db seed && npm run start:prod"]
