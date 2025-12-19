@@ -67,8 +67,6 @@ async function main() {
         const randomImage = `https://images.unsplash.com/photo-${[
             '1611892440504-42a792e24d32',
             '1582719508461-905c673771fd',
-            '1590490816852-4048781a9f9d',
-            '1566665797766-484fe709afb3',
             '1596394516093-501ba68a0ba6'
         ][Math.floor(Math.random() * 5)]}?auto=format&fit=crop&w=800&q=80`;
 
